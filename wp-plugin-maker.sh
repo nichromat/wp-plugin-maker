@@ -40,4 +40,4 @@ echo " * Description:       " $plugin_description >> $plugin_main_file;
 echo " * Version:           " $plugin_version >> $plugin_main_file;
 echo " * Author:            " $plugin_author >> $plugin_main_file;
 echo " * Author URI:        " $plugin_author_uri >> $plugin_main_file;
-echo " */"
+echo " */" >> $plugin_main_file;
