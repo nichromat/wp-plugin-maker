@@ -33,7 +33,7 @@ if [ $option == 1 ]; then
 fi
 
 echo "<?php" >> $plugin_main_file
-echo "/**"; >> $plugin_main_file
+echo "/**" >> $plugin_main_file
 echo " * Plugin Name:       " $plugin_name >> $plugin_main_file;
 echo " * Plugin URI:        " $plugin_uri >> $plugin_main_file;
 echo " * Description:       " $plugin_description >> $plugin_main_file;
