@@ -8,6 +8,8 @@ echo " ";
 echo "*****************";
 echo -n "Plugin Name: ";
 read plugin_name;
+echo -n "Plugin Filename: ";
+read plugin_file_name;
 echo -n "Plugin URI: ";
 read plugin_uri;
 echo -n "Description: ";
@@ -27,14 +29,14 @@ echo -n $promptip " ";
 read option;
 
 if [ $option == 1 ]; then
-    plugin_main_file="$plugin_name/$plugin_name.php";
-    mkdir "$plugin_name";
+    plugin_main_file="$plugin_file_name/$plugin_file_name.php";
+    mkdir "$plugin_file_name";
     touch "$plugin_main_file";
 fi
 
 echo "<?php" >> "$plugin_main_file";
-echo "/**" >> "$plugin_main_file";
 echo " " >> "$plugin_main_file";
+echo "/**" >> "$plugin_main_file";
 echo " * Plugin Name:       $plugin_name" >> "$plugin_main_file";
 echo " * Plugin URI:        $plugin_uri" >> "$plugin_main_file";
 echo " * Description:       $plugin_description" >> "$plugin_main_file";
