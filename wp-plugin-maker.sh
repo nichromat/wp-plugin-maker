@@ -1,5 +1,5 @@
 # /bin/bash
-clear
+clear;
 promptip=">";
 
 echo " ";
@@ -27,13 +27,14 @@ echo -n $promptip " ";
 read option;
 
 if [ $option == 1 ]; then
-    plugin_main_file="$plugin_name/$plugin_name.php"
+    plugin_main_file="$plugin_name/$plugin_name.php";
     mkdir "$plugin_name";
     touch "$plugin_main_file";
 fi
 
-echo "<?php" >> "$plugin_main_file"
-echo "/**" >> "$plugin_main_file"
+echo "<?php" >> "$plugin_main_file";
+echo "/**" >> "$plugin_main_file";
+echo " " >> "$plugin_main_file";
 echo " * Plugin Name:       $plugin_name" >> "$plugin_main_file";
 echo " * Plugin URI:        $plugin_uri" >> "$plugin_main_file";
 echo " * Description:       $plugin_description" >> "$plugin_main_file";
@@ -41,3 +42,4 @@ echo " * Version:           $plugin_version" >> "$plugin_main_file";
 echo " * Author:            $plugin_author" >> "$plugin_main_file";
 echo " * Author URI:        $plugin_author_uri" >> "$plugin_main_file";
 echo " */" >> "$plugin_main_file";
+echo "$plugin_main_file";
