@@ -28,8 +28,8 @@ read option;
 
 if [ $option == 1 ]; then
     plugin_main_file="$plugin_name/$plugin_name.php"
-    mkdir $plugin_name;
-    touch $plugin_main_file;
+    mkdir "$plugin_name";
+    touch "$plugin_main_file";
 fi
 
 echo "<?php" >> $plugin_main_file
