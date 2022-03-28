@@ -28,8 +28,6 @@ read plugin_author;
 echo -n "Author URI: ";
 read plugin_author_uri;
 
-case $option
-
 if [ $option == 1 ]; then
     plugin_main_file="$plugin_file_name/$plugin_file_name.php";
     mkdir "$plugin_file_name";
