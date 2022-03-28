@@ -2,6 +2,12 @@
 clear;
 promptip=">";
 
+echo "Choose a template";
+echo "------------------";
+echo "1. Single php file";
+echo -n $promptip " ";
+read option;
+
 echo " ";
 echo "Wordpress Plugin Maker";
 echo " ";
@@ -22,11 +28,7 @@ echo -n "Author URI: ";
 read plugin_author_uri;
 
 
-echo "Choose a template";
-echo "------------------";
-echo "1. Single php file";
-echo -n $promptip " ";
-read option;
+
 
 if [ $option == 1 ]; then
     plugin_main_file="$plugin_file_name/$plugin_file_name.php";
