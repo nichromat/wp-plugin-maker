@@ -28,7 +28,7 @@ read plugin_author;
 echo -n "Author URI: ";
 read plugin_author_uri;
 
-
+case $option
 
 if [ $option == 1 ]; then
     plugin_main_file="$plugin_file_name/$plugin_file_name.php";
@@ -36,7 +36,7 @@ if [ $option == 1 ]; then
     touch "$plugin_main_file";
 fi
 
-function createWpHeaderBasic(){
+function createWpBasicFile(){
     echo "<?php" >> "$plugin_main_file";
     echo " " >> "$plugin_main_file";
     echo "/**" >> "$plugin_main_file";
@@ -60,5 +60,5 @@ function initializeGit(){
 }
 
 
-createWpHeaderBasic;
+createWpBasicFile;
 initializeGit;
