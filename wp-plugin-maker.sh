@@ -48,3 +48,11 @@ echo " * Author:            $plugin_author" >> "$plugin_main_file";
 echo " * Author URI:        $plugin_author_uri" >> "$plugin_main_file";
 echo " */" >> "$plugin_main_file";
 echo "$plugin_main_file";
+
+cd $plugin_file_name;
+
+git init;
+git add .;
+git commit -m "Plugin Boilerplate";
+
+cd ..;
