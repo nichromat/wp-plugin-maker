@@ -30,29 +30,35 @@ read plugin_author_uri;
 
 
 
-
 if [ $option == 1 ]; then
     plugin_main_file="$plugin_file_name/$plugin_file_name.php";
     mkdir "$plugin_file_name";
     touch "$plugin_main_file";
 fi
 
-echo "<?php" >> "$plugin_main_file";
-echo " " >> "$plugin_main_file";
-echo "/**" >> "$plugin_main_file";
-echo " * Plugin Name:       $plugin_name" >> "$plugin_main_file";
-echo " * Plugin URI:        $plugin_uri" >> "$plugin_main_file";
-echo " * Description:       $plugin_description" >> "$plugin_main_file";
-echo " * Version:           $plugin_version" >> "$plugin_main_file";
-echo " * Author:            $plugin_author" >> "$plugin_main_file";
-echo " * Author URI:        $plugin_author_uri" >> "$plugin_main_file";
-echo " */" >> "$plugin_main_file";
-echo "$plugin_main_file";
+function createWpHeaderBasic(){
+    echo "<?php" >> "$plugin_main_file";
+    echo " " >> "$plugin_main_file";
+    echo "/**" >> "$plugin_main_file";
+    echo " * Plugin Name:       $plugin_name" >> "$plugin_main_file";
+    echo " * Plugin URI:        $plugin_uri" >> "$plugin_main_file";
+    echo " * Description:       $plugin_description" >> "$plugin_main_file";
+    echo " * Version:           $plugin_version" >> "$plugin_main_file";
+    echo " * Author:            $plugin_author" >> "$plugin_main_file";
+    echo " * Author URI:        $plugin_author_uri" >> "$plugin_main_file";
+    echo " */" >> "$plugin_main_file";
+    echo "$plugin_main_file";
+}
 
-cd $plugin_file_name;
 
-git init;
-git add .;
-git commit -m "Plugin Boilerplate";
+function initializeGit(){
+    cd $plugin_file_name;
+    git init;
+    git add .;
+    git commit -m "Plugin Boilerplate";
+    cd ..;
+}
 
-cd ..;
+
+createWpHeaderBasic;
+initializeGit;
