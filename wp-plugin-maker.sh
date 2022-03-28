@@ -5,6 +5,7 @@ promptip=">";
 echo "Choose a template";
 echo "------------------";
 echo "1. Single php file";
+echo "2. Font adding plugin"
 echo -n $promptip " ";
 read option;
 
